@@ -24,20 +24,44 @@ characterLength = window.prompt("How many characters would you like your passwor
 if (characterLength < 8 || characterLength >128){
   alert("Character length must be between 8 and 128 characters");
   promptOptiions();
-} else{
-  var lowerCase = window.confirm("Would you like to use lowercase letters in your password?");
+} 
+
+var lowerCase = window.confirm("Would you like to use lowercase letters in your password?");
+if(lowerCase){
+  alert("Lowercase letters will be added to your password.");
+}
+  else{
+    alert("Lowercase letters will NOT be used in your passoword.")
+  }
   var upperCase = window.confirm("Would you like to use uppercase letters in your password?");
+  if(upperCase){
+  alert("Uppercase Letters will be added to your password.");
+  }
+  else{
+    alert("Uppercase letters will NOT be used in your password.")
+  }
   var number = window.confirm("Would you like to use numbers in your password?");
-  var characters = window.confirm("Would you like to use spacial characters in your password?");
+  if (number){
+    alert("Numbers will be used in your password");
+  }
+  else{
+    alert("Numbers will NOT be used in your password.");
+  }
+  var characters = window.confirm("Would you like to use special characters in your password?");
+  if (characters){
+  alert("Special characters will be used in your password.");
+  }
+  else{
+    alert("Characters will NOT be used in your password");
+  }
   return {lowerCase, upperCase, number, characters}
 }
 
-}
 function generatePassword(){
 var passwordOptions=promptOptiions()
   var basket= ""
    for (var i=0; i < characterLength; i++){
-
+var randomchar= Math.floor(Math.random())
      
   }
 };
